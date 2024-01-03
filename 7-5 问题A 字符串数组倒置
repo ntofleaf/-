@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+void reverse(char str[],int length)
+{
+    char str1[100];
+    strcpy(str1,str);
+    for(int i=0;i<length;i++)
+    {
+        str[i]=str1[length-i-1];
+    }
+}
+int main()
+{
+    char str[100];
+    gets(str);
+    int length=strlen(str);
+    reverse(str,length);
+    puts(str);
+}
