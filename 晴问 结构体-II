@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+struct student
+{
+    int id;
+    char name[15];
+    studnet(){};
+    student(int _id,char _name[])
+    {
+        id=_id;
+        strcpy(name,_name);
+    }
+};
+int main()
+{
+    int _id;
+    char _name[15];
+    scanf("%d",&_id);
+    getchar();//吸收换行符
+    gets(_name);
+    student a=student(_id,_name);
+    printf("%d\n",a.id);
+    puts(a.name);
+}
