@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<iomanip>
+#include<string.h>
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a;
+    double b;
+    char c[20];
+    cin>>a>>b;
+    getchar();//吸收空格或者换行
+    cin.getline(c,20);
+    cout<<a<<endl;
+    cout<<setiosflags(ios::fixed)<<setprecision(2)<<b<<endl;
+    cout<<c;
+}
