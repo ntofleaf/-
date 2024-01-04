@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+const double eqs=1e-8;
+int greater (double a,double b)
+{
+    if(a-b>eqs)return 1;
+    else return 0;
+}
+int less(double a,double b)
+{
+    if(a-b<-eqs)return 1;
+    else return 0;
+}
+int main()
+{
+    int a,b,c,d;
+    scanf("%d%d%d%d",&a,&b,&c,&d);
+    double result1=a*asin(sqrt(b)/2.0);
+    double result2=c*asin(sqrt(d)/2.0);
+    int m=greater(result1,result2);
+    int n=less(result1,result2);
+    if(m)
+    {
+        printf("1");//只能判断大于
+    }
+    else if(n)
+    {
+        printf("2");
+    }
+    else printf("0");
+}
