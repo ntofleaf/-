@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int num1,num2,a[100];
+    scanf("%d",&num1);
+    for(int i=0;i<num1;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    scanf("%d",&num2);
+    for(int i=0;i<num1;i++)
+    {
+        if(a[i]==num2)
+            {
+                printf("%d",i+1);
+                break;
+            }
+        else
+            {
+                printf("NO");
+                break;
+            }
+    }
+}//此种错误在于第一次查不到就直接no了
