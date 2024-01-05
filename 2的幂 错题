@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n;
+    int sum=1;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        sum=(sum*2)%1007;//2的91次方过大，double型变量无法取余
+    }
+    printf("%d",sum);
+}
