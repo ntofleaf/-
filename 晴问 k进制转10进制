@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    int q;
+    int result=0;
+    scanf("%s %d",str,&q);
+    int base=1;
+    int length=strlen(str);
+    for(int i=length-1;i>=0;i--)
+    {
+        if(str[i]>='0'&&str[i]<='9')str[i]-='0';
+        else str[i]=str[i]-'A'+10;
+        result=result+base*str[i];//字符转化为数字（十六进制）
+        base*=q;
+    }
+    printf("%d",result);
+}
