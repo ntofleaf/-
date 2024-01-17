@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string.h>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    int n,k;
+    int a[100000];
+    int ans=0;
+    bool hash[1000000]={false};
+    scanf("%d%d",&n,&k);
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        hash[a[i]]=true;
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(k>=a[i]&&hash[k-a[i]]==true)ans++;//a+b=k需要满足两个条件，a,b都小于k
+    }
+    printf("%d",ans/2);
+}
