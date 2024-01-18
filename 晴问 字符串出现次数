@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string.h>
+#include <algorithm>
+using namespace std;
+int gethashTable(char str[3])
+{
+    int m=str[0]*26*26+str[1]*26+str[2];
+    return m;
+}
+int main()
+{
+    int n1,n2;
+    int hashTable[26*26*26*26]={0};
+    char str[3];
+    scanf("%d",&n1);
+    for(int i=0;i<n1;i++)
+    {
+        scanf("%s",str);
+        hashTable[gethashTable(str)]++;
+    }
+    scanf("%d",&n2);
+    for(int i=0;i<n2;i++)
+    {
+        scanf("%s",str);
+        if(i!=n2-1)printf("%d ",hashTable[gethashTable(str)]);
+        else printf("%d ",hashTable[gethashTable(str)]);
+    }
+}
